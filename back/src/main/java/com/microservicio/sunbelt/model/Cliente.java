@@ -10,13 +10,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Cliente {
-    private String primer_nombre;
-    private String segundo_nombre;
-    private String primer_apellido;
-    private String segundo_apellido;
+    private String primerNombre;
+    private String segundoNombre;
+    private String primerApellido;
+    private String segundoApellido;
     private String telefono;
     private String direccion;
-    private String ciudad_residencia;
-    private String tipo_documento;
-    private String numero_documento;
+    private String ciudadResidencia;
+    private String tipoDocumento;
+    private String numeroDocumento;
 }

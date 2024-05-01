@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClienteDtoRequest {
-    private String tipo_documento;
-    private String numero_documento;
+public class ClienteRequestDto {
+    private String tipoDocumento;
+    private String numeroDocumento;
 }

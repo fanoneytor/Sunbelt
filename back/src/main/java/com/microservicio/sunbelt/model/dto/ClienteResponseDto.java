@@ -9,12 +9,12 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClienteDtoResponse {
-    private String primer_nombre;
-    private String segundo_nombre;
-    private String primer_apellido;
-    private String segundo_apellido;
+public class ClienteResponseDto {
+    private String primerNombre;
+    private String segundoNombre;
+    private String primerApellido;
+    private String segundoApellido;
     private String telefono;
     private String direccion;
-    private String ciudad_residencia;
+    private String ciudadResidencia;
 }
