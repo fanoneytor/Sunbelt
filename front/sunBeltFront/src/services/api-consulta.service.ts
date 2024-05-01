@@ -11,10 +11,10 @@ export class ApiConsultaService {
   constructor(private http: HttpClient) {
   }
 
-  consultarUsuario(tipo_documento: string, numero_documento: string): Observable<any> {
+  consultarUsuario(tipoDocumento: string, numeroDocumento: string): Observable<any> {
     return this.http.post<any>(this.apiUrl + 'api/cliente/consultarCliente', {
-      "tipo_documento": tipo_documento,
-      "numero_documento": numero_documento
+      "tipoDocumento": tipoDocumento,
+      "numeroDocumento": numeroDocumento
     })
   }
 

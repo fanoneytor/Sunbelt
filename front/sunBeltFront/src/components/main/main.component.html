@@ -1,24 +1,24 @@
 <div class="container">
   <h2>CONSULTAR USUARIO</h2>
   <div class="form-group">
-    <select required class="form-control" id="tipoDocumento" [(ngModel)]="tipo_documento">
+    <select required class="form-control" id="tipoDocumento" [(ngModel)]="tipoDocumento">
       <option value="" disabled selected>Selecciona una opción</option>
       <option value="C">Cédula de Ciudadanía</option>
       <option value="P">Pasaporte</option>
     </select>
-    <input type="text" class="form-control" id="numeroDocumento" placeholder="Numero de Documento" [(ngModel)]="numero_documento">
+    <input type="text" class="form-control" id="numeroDocumento" placeholder="Numero de Documento" [(ngModel)]="numeroDocumento">
   </div>
   <button class="btn" (click)="consultarUsuario()">Consultar</button>
   <div *ngIf="resultado" class="resultado">
-    <div *ngIf="usuario_encontrado; else errorTemplate" class="usuario-encontrado">
+    <div *ngIf="usuarioEncontrado; else errorTemplate" class="usuario-encontrado">
       <h3>Datos del Usuario:</h3>
-      <p><strong>Primer Nombre:</strong> {{ usuario.primer_nombre }}</p>
-      <p><strong>Segundo Nombre:</strong> {{ usuario.segundo_nombre }}</p>
-      <p><strong>Primer Apellido:</strong> {{ usuario.primer_apellido }}</p>
-      <p><strong>Segundo Apellido:</strong> {{ usuario.segundo_apellido }}</p>
+      <p><strong>Primer Nombre:</strong> {{ usuario.primerNombre }}</p>
+      <p><strong>Segundo Nombre:</strong> {{ usuario.segundoNombre }}</p>
+      <p><strong>Primer Apellido:</strong> {{ usuario.primerApellido }}</p>
+      <p><strong>Segundo Apellido:</strong> {{ usuario.segundoApellido }}</p>
       <p><strong>Teléfono:</strong> {{ usuario.telefono }}</p>
       <p><strong>Dirección:</strong> {{ usuario.direccion }}</p>
-      <p><strong>Ciudad de Residencia:</strong> {{ usuario.ciudad_residencia }}</p>
+      <p><strong>Ciudad de Residencia:</strong> {{ usuario.ciudadResidencia }}</p>
     </div>
     <ng-template #errorTemplate>
       <div class="alert alert-danger" role="alert">

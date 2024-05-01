@@ -12,10 +12,10 @@ import { ApiConsultaService } from '../../services/api-consulta.service';
   styleUrl: './main.component.css'
 })
 export class MainComponent {
-  tipo_documento : string = '';
-  numero_documento : string = '';
+  tipoDocumento : string = '';
+  numeroDocumento : string = '';
   resultado : boolean = false;
-  usuario_encontrado : boolean = false;
+  usuarioEncontrado : boolean = false;
   usuario : any = {};
 
   constructor(private apiService: ApiConsultaService){
@@ -23,18 +23,18 @@ export class MainComponent {
   }
 
   consultarUsuario() {
-    this.apiService.consultarUsuario(this.tipo_documento, this.numero_documento)
+    this.apiService.consultarUsuario(this.tipoDocumento, this.numeroDocumento)
       .subscribe(
         (data: any) => {
           this.usuario = data;
-          this.usuario_encontrado = true;
+          this.usuarioEncontrado = true;
           this.resultado = true;
         },
         (error) => {
           this.resultado = true;
-          this.usuario_encontrado = false;
+          this.usuarioEncontrado = false;
           
-          Swal.fire('Se ha Generado un Error', error.error, 'error');
+          Swal.fire('El dato no existe', error.error, 'error');
         }
       );
   }
