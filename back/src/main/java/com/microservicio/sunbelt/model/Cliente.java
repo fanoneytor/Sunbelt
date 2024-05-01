@@ -1,4 +1,4 @@
-package com.microservicio.sunbelt.entidad;
+package com.microservicio.sunbelt.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
