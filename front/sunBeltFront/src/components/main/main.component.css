@@ -1,0 +1,21 @@
+/* consultar-usuario.component.css */
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .resultado {
+    margin-top: 20px;
+  }
+  
+  .usuario-encontrado {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+  }
