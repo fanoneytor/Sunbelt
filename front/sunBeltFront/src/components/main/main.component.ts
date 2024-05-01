@@ -34,7 +34,7 @@ export class MainComponent {
           this.resultado = true;
           this.usuarioEncontrado = false;
           
-          Swal.fire('El dato no existe', error.error, 'error');
+          Swal.fire('El dato no existe', error.error.message, 'error');
         }
       );
   }
