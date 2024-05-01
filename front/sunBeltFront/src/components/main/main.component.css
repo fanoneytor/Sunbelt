@@ -1,21 +1,56 @@
-/* consultar-usuario.component.css */
-
 .container {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .resultado {
-    margin-top: 20px;
-  }
-  
-  .usuario-encontrado {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f7f7f7;
-  }
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  border-radius: 4px;
+  background: #191c29;
+  box-shadow: 0 50px 75px rgba(255, 255, 255, 0.3);
+}
+
+.form-group {
+  margin-bottom: 100px;
+  color: #f7f7f7;
+}
+
+.form-control{
+  width: 70%;
+  background: #24303c;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 40px;
+  border: 1px solid gray;
+  font-size: 18px;
+}
+
+.resultado {
+  padding: 20px;
+  background-color: #212534;
+  color: #f7f7f7;
+  font-size: 25px;
+}
+
+.usuario-encontrado {
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #212534;
+  color: #f7f7f7;
+  font-size: 25px;
+}
+
+h2{
+  color: white;
+}
+
+select:invalid {
+  color: gray;
+  font-size: 18px;
+}
+
+.btn{
+  width: 70%;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
