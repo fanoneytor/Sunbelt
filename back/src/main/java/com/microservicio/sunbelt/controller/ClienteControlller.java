@@ -22,7 +22,12 @@ public class ClienteControlller {
 
     private static final Logger logger = LoggerFactory.getLogger(ClienteControlller.class);
 
-
+    /**
+     * Endpoint para consultar un cliente por tipo de documento y número de documento.
+     *
+     * @param clienteRequestDTO los datos aislados para consultar el cliente.
+     * @return La información del cliente consultado.
+     */
     @PostMapping("/consultarCliente")
     public ResponseEntity<ClienteResponseDto> consultarCliente(@RequestBody ClienteRequestDto clienteRequestDTO) {
         logger.info("Se realiza la peticion, se obtienen los datos: {}", clienteRequestDTO);

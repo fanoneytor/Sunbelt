@@ -13,6 +13,11 @@ public class SunbeltApplication {
         SpringApplication.run(SunbeltApplication.class, args);
     }
 
+    /**
+     * Configuración para permitir solicitudes CORS en la aplicación.
+     *
+     * @return El WebMvcConfigurer configurado para permitir CORS.
+     */
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {

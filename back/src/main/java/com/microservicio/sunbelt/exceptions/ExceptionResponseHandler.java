@@ -16,22 +16,44 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @RestController
 @Slf4j
 public class ExceptionResponseHandler extends ResponseEntityExceptionHandler {
+
+    /**
+     * Maneja BadRequestException y devuelve una respuesta con estado HTTP 400 (Bad Request).
+     *
+     * @param ex      La excepción BadRequestException.
+     * @param request El objeto WebRequest.
+     * @return La respuesta de excepción con estado HTTP 400.
+     */
     @ExceptionHandler(BadRequestException.class)
-    public final ResponseEntity<ExceptionResponse> handleBadRequestException(BadRequestException ex, WebRequest request){
+    public final ResponseEntity<ExceptionResponse> handleBadRequestException(BadRequestException ex, WebRequest request) {
         String message = ex.getMessage();
         ExceptionResponse exceptionResponse = new ExceptionResponse(message);
         return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
     }
 
+    /**
+     * Maneja NotFoundException y devuelve una respuesta con estado HTTP 404 (Not Found).
+     *
+     * @param ex      La excepción NotFoundException.
+     * @param request El objeto WebRequest.
+     * @return La respuesta de excepción con estado HTTP 404.
+     */
     @ExceptionHandler(NotFoundException.class)
-    public final ResponseEntity<ExceptionResponse> handleNotFoundException(NotFoundException ex, WebRequest request){
+    public final ResponseEntity<ExceptionResponse> handleNotFoundException(NotFoundException ex, WebRequest request) {
         String message = ex.getMessage();
         ExceptionResponse exceptionResponse = new ExceptionResponse(message);
         return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_FOUND);
     }
 
+    /**
+     * Maneja InternalServerErrorException y devuelve una respuesta con estado HTTP 500 (Internal Server Error).
+     *
+     * @param ex      La excepción InternalServerErrorException.
+     * @param request El objeto WebRequest.
+     * @return La respuesta de excepción con estado HTTP 500.
+     */
     @ExceptionHandler(InternalServerErrorException.class)
-    public final ResponseEntity<ExceptionResponse> handleInternalServerErrorException(InternalServerErrorException ex, WebRequest request){
+    public final ResponseEntity<ExceptionResponse> handleInternalServerErrorException(InternalServerErrorException ex, WebRequest request) {
         String message = ex.getMessage();
         ExceptionResponse exceptionResponse = new ExceptionResponse(message);
         return new ResponseEntity<>(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);

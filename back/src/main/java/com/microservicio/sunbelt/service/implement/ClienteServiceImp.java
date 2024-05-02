@@ -17,6 +17,17 @@ import java.util.Objects;
 public class ClienteServiceImp implements ClienteService {
     private static final Logger logger = LoggerFactory.getLogger(ClienteService.class);
 
+    /**
+     * Consulta un cliente por tipo de documento y número de documento.
+     *
+     * @param tipoDocumento   El tipo de documento del cliente.
+     * @param numeroDocumento El número de documento del cliente.
+     * @return La informacion del cliente disponible para mostrar
+     * @throws BadRequestException          Si los datos de entrada son inválidos.
+     * @throws NotFoundException            Si no se encuentra el cliente.
+     * @throws InternalServerErrorException Si ocurre un error interno.
+     */
+    @Override
     public ClienteResponseDto consultarCliente(String tipoDocumento, String numeroDocumento) {
         logger.info("Se realiza consulta del cliente");
 
