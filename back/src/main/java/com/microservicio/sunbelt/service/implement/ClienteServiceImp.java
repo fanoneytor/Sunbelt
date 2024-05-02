@@ -46,7 +46,7 @@ public class ClienteServiceImp implements ClienteService {
                 return modelMapper.map(cliente, ClienteResponseDto.class);
             } else {
                 logger.warn("tipo de documento no es C o numero de documento diferente a 10121314");
-                throw new NotFoundException("Not Fuound");
+                throw new NotFoundException("Not Found");
             }
         } catch (InternalServerErrorException e) {
             throw new InternalServerErrorException("Internal Server Error");
